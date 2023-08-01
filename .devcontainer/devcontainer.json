@@ -20,9 +20,11 @@
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {
-      "extensions": ["esbenp.prettier-vscode",
-      "dbaeumer.vscode-eslint",
-      "streetsidesoftware.code-spell-checker"]
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "streetsidesoftware.code-spell-checker"
+      ]
     }
   },
 

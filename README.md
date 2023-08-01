@@ -197,3 +197,15 @@ Ensure that you have a separate develop branch and keep it up-to-date with the l
 That's it! You now have Dependabot configured to manage version updates for npm, Docker, and GitHub Actions dependencies in your React-TS-Template project.
 
 Happy updating! 🚀💻
+
+## Technologies Used
+
+- [Docker](https://www.docker.com/)
+- [Remote Development](https://code.visualstudio.com/docs/remote/remote-overview)
+- [Prettier](https://prettier.io/docs/en/index.html)
+- [ESLint](https://eslint.org/)
+- [Vite](https://vitejs.dev/)
+- [Dependabot](https://github.com/dependabot)
+- [Github Actions](https://docs.github.com/en/actions)
+- [Husky](https://typicode.github.io/husky/)
+- [Lint-staged](https://github.com/okonet/lint-staged)

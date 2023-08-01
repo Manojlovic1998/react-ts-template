@@ -5,6 +5,10 @@ FROM node:20-buster AS builder
 SHELL ["/bin/bash", "-c"]
 
 
+# Prettier config https://github.com/prettier/eslint-config-prettier#excluding-deprecated-rules
+ENV ESLINT_CONFIG_PRETTIER_NO_DEPRECATED=true 
+
+
 # Change to /home/node/<your-project-name>
 WORKDIR /home/node/project-name
 
