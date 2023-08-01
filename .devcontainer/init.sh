@@ -18,4 +18,4 @@ echo "${GREEN}Sourcing .bashrc file into current active bash env"
 
 echo "${PURPLE}----------------------------"
 echo "${GREEN}Installation Completed"
-echo "${$PURPLE}----------------------------"
+echo "${PURPLE}----------------------------"

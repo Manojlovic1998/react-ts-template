@@ -12,7 +12,7 @@ COPY --chown=node:node ["package.json", "package-lock.json*", "./"]
 
 
 # Releases containing enhancements
-RUN apt update
+RUN apt update -y
 
 # Install env utils and tools
 RUN apt install git jpegoptim optipng webp imagemagick -y
