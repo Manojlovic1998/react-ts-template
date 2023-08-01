@@ -1,0 +1,70 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    # Look for `package.json` and `lock` files in the `root` directory
+    directory: "/" # Location of package manifests
+    # Check the npm registry for updates every month
+    schedule:
+      interval: "monthly"
+      timezone: "Europe/Belgrade"
+    # Raise pull requests for npm dependencies version updates
+    # against the `develop` branch.
+    target-branch: "develop"
+    pull-request-branch-name:
+      # Separate sections of the branch name with a hyphen
+      separator: "-"
+    commit-message:
+      # Prefix all commit messages with...
+      prefix: "npm prod"
+      prefix-development: "npm dev"
+      include: "scope"
+    # Raise all npm pull requests with custom labels
+    labels:
+      - "npm dependencies"
+
+  # Enable version updates for Docker
+  - package-ecosystem: "docker"
+    # Look for a `Dockerfile` in the `.devcontainer` directory found in `root` of the project.
+    directory: "/.devcontainer"
+    # Check for updates once  a month
+    schedule:
+      interval: "monthly"
+      timezone: "Europe/Belgrade"
+    # Raise pull requests for Docker version updates
+    # against the `develop` branch.
+    target-branch: "develop"
+    pull-request-branch-name:
+      # Separate sections of the branch name with a hyphen
+      separator: "-"
+    commit-message:
+      # Prefix all commit messages with "[docker] " (no colon, but a trailing whitespace)
+      prefix: "[docker] "
+    # Use custom labels on pull requests for Docker version updates
+    labels:
+      - "Docker dependencies"
+
+    # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    # Check for updates once  a month
+    schedule:
+      interval: "monthly"
+      timezone: "Europe/Belgrade"
+    # Raise pull requests for Github Actions dep. version updates
+    # against the `develop` branch.
+    target-branch: "develop"
+    pull-request-branch-name:
+      # Separate sections of the branch name with a hyphen
+      separator: "-"
+    commit-message:
+      # Prefix all commit messages with "GitHub Actions"
+      prefix: "GitHub Actions"
+    # Use custom labels on pull requests for GitHub Actions dep. version updates
+    labels:
+      - "GitHub Actions dependencies"
