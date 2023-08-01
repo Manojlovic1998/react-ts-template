@@ -20,7 +20,7 @@
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {
-      "extensions": ["astro-build.astro-vscode", "esbenp.prettier-vscode"]
+      "extensions": ["esbenp.prettier-vscode"]
     }
   },
 
