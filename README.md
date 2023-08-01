@@ -104,7 +104,7 @@ The `init.sh` script, executed as a post-create command, sets up additional tool
 
 The Dockerfile defines the development environment for your project. It sets the default shell to Bash, installs essential utilities and tools (e.g., `git`, `jpegoptim`, `optipng`, `webp`, and `imagemagick`), and specifies the development environment variables.
 
-### 🚀 Dependabot Configuration Documentation 🚀
+### 🚀 Dependabot Configuration 🚀
 
 #### What is Dependabot?
 
@@ -112,7 +112,7 @@ Dependabot is a powerful tool that automatically checks for outdated dependencie
 
 #### How to Use Dependabot?
 
-To get started with Dependabot version updates, you'll find a file named .github/dependabot.yml in your React-TS-Template repository. This file contains the configuration for Dependabot, specifying which package ecosystems to update and where the package manifests are located.
+To get started with Dependabot version updates, you'll find a file named ``.github/dependabot.yml` in your React-TS-Template repository. This file contains the configuration for Dependabot, specifying which package ecosystems to update and where the package manifests are located.
 
 #### Customizing Dependabot Settings
 
@@ -180,15 +180,15 @@ To get started with Dependabot version updates, you'll find a file named .github
 
 You can customize the Dependabot configuration to better suit your project's needs:
 
-- **Package Ecosystems**: If your project uses other package ecosystems, you can add more entries to the updates list for each ecosystem. Refer to the documentation for the complete list of supported ecosystems.
-- **Update Schedule**: You can adjust the interval in the schedule section to control how often Dependabot checks for updates. For example, set interval to "daily" for more frequent checks.
-- **Branch Names and Labels**: In the target-branch and pull-request-branch-name sections, customize the branch names for target branches and pull request branches as per your branch naming conventions. Similarly, modify the labels to your preferred ones in the labels section.
-- **Commit Message Prefix**: Change the prefix value in the commit-message section to specify a custom prefix for commit messages. The prefix-development option allows different prefixes for development dependency updates.
-- **Package Manifest Location**: Update the directory value to point to the correct location of package manifests for each package ecosystem.
+- **Package Ecosystems**: If your project uses other package ecosystems, you can add more entries to the `updates` list for each ecosystem. Refer to the [documentation](https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates) for the complete list of supported ecosystems.
+- **Update Schedule**: You can adjust the `interval` in the `schedule` section to control how often Dependabot checks for updates. For example, set `interval` to "`daily"` for more frequent checks.
+- **Branch Names and Labels**: In the `target-branch` and `pull-request-branch-name` sections, customize the branch names for target branches and pull request branches as per your branch naming conventions. Similarly, modify the `labels` to your preferred ones in the labels section.
+- **Commit Message Prefix**: Change the `prefix` value in the `commit-message` section to specify a custom prefix for commit messages. The `prefix-development` option allows different prefixes for development dependency updates.
+- **Package Manifest Location**: Update the `directory` value to point to the correct location of package manifests for each package ecosystem.
 
 #### Activating Dependabot
 
-Once you've saved the .github/dependabot.yml file in your repository, Dependabot will automatically start monitoring for outdated dependencies according to the specified schedule. It will create pull requests on the develop branch whenever updates are available. Review the pull requests, test the updates, and merge them to keep your project up-to-date with the latest dependencies.
+Once you've saved the `.github/dependabot.yml` file in your repository, Dependabot will automatically start monitoring for outdated dependencies according to the specified schedule. It will create pull requests on the develop branch whenever updates are available. Review the pull requests, test the updates, and merge them to keep your project up-to-date with the latest dependencies.
 
 #### **Important Note**:
 
