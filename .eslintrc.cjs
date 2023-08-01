@@ -14,7 +14,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    project: ["./tsconfig.json"],
+    project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
   // Installed Plugins
@@ -27,5 +27,11 @@ module.exports = {
     ],
   },
 
-  ignorePatterns: ["dist", ".eslintrc.cjs", ".devcontainer", ".github"],
+  ignorePatterns: [
+    "dist",
+    ".eslintrc.cjs",
+    ".devcontainer",
+    ".github",
+    ".husky",
+  ],
 };

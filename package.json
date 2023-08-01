@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "prettier:write": "prettier . --write",
+    "prettier:write": "prettier . --write --cache --ignore-unknown",
     "prettier:check": "prettier . --check",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -25,8 +26,14 @@
     "eslint-config-prettier": "^8.9.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.3",
     "prettier": "^3.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --cache --ignore-unknown",
+    "*.{ts,tsx}": "eslint --cache --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   }
 }
