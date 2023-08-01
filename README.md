@@ -48,7 +48,12 @@ Specify the path to your Dockerfile, and adjust the "context" if needed.
 {
   "customizations": {
     "vscode": {
-      "extensions": ["astro-build.astro-vscode", "esbenp.prettier-vscode"]
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "streetsidesoftware.code-spell-checker",
+        "tombonnike.vscode-status-bar-format-toggle"
+      ]
     }
   }
 }
@@ -60,7 +65,7 @@ You can specify additional VS Code extensions as needed to enhance your developm
 
 ```json
 {
-  "forwardPorts": [3000]
+  "forwardPorts": [5173]
 }
 ```
 
