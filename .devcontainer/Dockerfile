@@ -8,7 +8,7 @@ SHELL ["/bin/bash", "-c"]
 # Change to /home/node/<your-project-name>
 WORKDIR /home/node/project-name
 
-# COPY --chown=node:node ["package.json", "package-lock.json*", "./"]
+COPY --chown=node:node ["package.json", "package-lock.json*", "./"]
 
 
 # Releases containing enhancements
