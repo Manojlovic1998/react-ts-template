@@ -1,0 +1,40 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/alpine
+{
+  // Container name
+  "name": "project-name",
+
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "target": "dev",
+    "context": "../"
+  },
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {},
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [3000],
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": ["astro-build.astro-vscode", "esbenp.prettier-vscode"]
+    }
+  },
+
+  // Mount the source code into the container.
+  // Change the path to suit your project name /home/node/<your-project-name> or use predefined vars
+  // More Info: https://code.visualstudio.com/docs/editor/variables-reference
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/node/project-name,type=bind",
+
+  // Change the path to suit your project name /home/node/<your-project-name>
+  "workspaceFolder": "/home/node/project-name",
+
+  // Run commands in the container after it is created.
+  "postCreateCommand": ". .devcontainer/init.sh",
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  "remoteUser": "node"
+}
